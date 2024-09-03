@@ -3,7 +3,6 @@ import './App.css';
 import Typewriter from 'typewriter-effect';
 import Slider from 'react-slick';
 
-
 import logopink from './images/LOGO/blacklogo.png';
 
 import profilePic from './images/home-profile.jpg';
@@ -22,6 +21,10 @@ import comic1 from './images/COMICS/1.jpg';
 import comic2 from './images/COMICS/2.jpg';
 import comic3 from './images/COMICS/3.jpg';
 
+import ad1 from './images/PILLOW/Ad 1.png';
+import ad2 from './images/PILLOW/Ad 2.png';
+import ad3 from './images/PILLOW/Welcome Email.png';
+
 import exampleImage1 from './images/PUBMATS/1.png';
 import exampleImage2 from './images/PUBMATS/2.png';
 import exampleImage3 from './images/PUBMATS/3.png';
@@ -36,14 +39,9 @@ import figma3 from './images/FIGMA/hta.png';
 
 const App = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
-
-  const handleMouseEnter = (index) => {
-    setHoveredItem(index);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredItem(null);
-  };
+  
+  const handleMouseEnter = (index) => { setHoveredItem(index); };
+  const handleMouseLeave = () => { setHoveredItem(null); };
 
   const settings = {
     dots: true,
@@ -186,6 +184,30 @@ const App = () => {
                 </div>
               </div>
             </div>
+
+            <div className="text-content">
+              <h3>Advertisement and Welcome Email</h3>
+                <p>A promotional message to persuade an audience to take action and the first message to greet and engage new subscribers.</p>
+            </div>
+            <div className="section-grid">
+              <div className="section-card">
+                <div className="portfolio-item">
+                  <img src={ad1} alt="Slide 1" />
+                </div>
+              </div>
+
+              <div className="section-card">
+                <div className="portfolio-item">
+                  <img src={ad2} alt="Slide 2" />
+                </div>
+              </div>
+
+              <div className="section-card">
+                <div className="portfolio-item">
+                  <img src={ad3} alt="Slide 3" />
+                </div>
+              </div>
+            </div>
           
             <div className="text-content">
               <h3>Pubmats</h3>
@@ -250,40 +272,60 @@ const App = () => {
               <p>This is a project I did in college. We need to create a logo and print it.</p>
             </div>
 
-              <div className="section-grid">
-                <div className="section-card">
-                  <Slider {...settings}>
-                    
-                  <div className="portfolio-item">
-                      <img src={card1} alt="Slide 1" />
-                    </div>
-                    <div className="portfolio-item">
-                      <img src={card2} alt="Slide 2" />
-                    </div>
-                    <div className="portfolio-item">
-                      <img src={card3} alt="Slide 3" />
-                    </div>
-                    <div className="portfolio-item">
-                      <img src={card4} alt="Slide 1" />
-                    </div>
-                    <div className="portfolio-item">
-                      <img src={card5} alt="Slide 2" />
-                    </div>
-                    <div className="portfolio-item">
-                      <img src={card6} alt="Slide 3" />
-                    </div>
-                    <div className="portfolio-item">
-                      <img src={card7} alt="Slide 1" />
-                    </div>
-                    <div className="portfolio-item">
-                      <img src={card8} alt="Slide 2" />
-                    </div>
-                    <div className="portfolio-item">
-                      <img src={card9} alt="Slide 3" />
-                    </div>
-                  </Slider>
+            <div className="section-grid">
+              <div className="section-card">
+                <div className="portfolio-item">
+                  <img src={card1} alt="Slide 1" />
                 </div>
               </div>
+
+              <div className="section-card">
+                <div className="portfolio-item">
+                  <img src={card2} alt="Slide 2" />
+                </div>
+              </div>
+
+              <div className="section-card">
+                <div className="portfolio-item">
+                  <img src={card3} alt="Slide 3" />
+                </div>
+              </div>
+              <div className="section-card">
+                <div className="portfolio-item">
+                  <img src={card4} alt="Slide 1" />
+                </div>
+              </div>
+
+              <div className="section-card">
+                <div className="portfolio-item">
+                  <img src={card5} alt="Slide 2" />
+                </div>
+              </div>
+
+              <div className="section-card">
+                <div className="portfolio-item">
+                  <img src={card6} alt="Slide 3" />
+                </div>
+              </div>
+
+              <div className="section-card">
+                <div className="portfolio-item">
+                  <img src={card7} alt="Slide 1" />
+                </div>
+              </div>
+
+              <div className="section-card">
+                <div className="portfolio-item">
+                  <img src={card8} alt="Slide 2" />
+                </div>
+              </div>
+
+              <div className="section-card">
+                <div className="portfolio-item">
+                  <img src={card9} alt="Slide 3" />
+                </div>
+              </div>
+            </div>
         </div>
       </section>
     {/* contact page */}

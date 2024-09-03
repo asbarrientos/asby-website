@@ -203,6 +203,30 @@ body {
   border-radius: 10px;
 }
 
+/* Gallery */
+.category-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.category-filter button {
+  padding: 10px 20px;
+  background-color: #ff6581;
+  cursor: pointer;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.category-filter button.active,
+.category-filter button:hover {
+  background-color: #ff4b70;
+}
+
 /* contact page */
 
 /* footer page */
