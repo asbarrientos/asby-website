@@ -3,6 +3,8 @@ import './App.css';
 import Typewriter from 'typewriter-effect';
 import Slider from 'react-slick';
 
+import placeholder from './images/placeholder-image.png';
+
 import logopink from './images/LOGO/blacklogo.png';
 
 import profilePic from './images/home-profile.jpg';
@@ -39,9 +41,12 @@ import figma3 from './images/FIGMA/hta.png';
 
 const App = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
-  
-  const handleMouseEnter = (index) => { setHoveredItem(index); };
-  const handleMouseLeave = () => { setHoveredItem(null); };
+  const [firstModalOpen, setFirstModalOpen] = useState(false);
+  const [secondModalOpen, setSecondModalOpen] = useState(false);
+  const [thirdModalOpen, setThirdModalOpen] = useState(false);
+
+  const handleMouseEnter = (index) => setHoveredItem(index);
+  const handleMouseLeave = () => setHoveredItem(null);
 
   const settings = {
     dots: true,
@@ -328,6 +333,184 @@ const App = () => {
             </div>
         </div>
       </section>
+
+      <section id="portfolio">
+        <div className="section-container">
+          <h2 className="section-title">! WORK IN PROCESSING !</h2>
+            <div className="card-containers-wrapper">
+            {/* First Card */}
+            <div className="card-container-wrapper">
+              <div className="card-container">
+                <div className="card" onClick={() => setFirstModalOpen(true)} style={{ cursor: 'pointer' }}>
+                  <img src={placeholder} className="card-img-top" alt="cards" />
+                  <div className="card-body">
+                    <p className="card-text">
+                      Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+                {firstModalOpen && (
+                  <div className="modal">
+                    <div className="modal-overlay" onClick={() => setFirstModalOpen(false)}></div>
+                    <div className="modal-content">
+                      <span className="close" onClick={() => setFirstModalOpen(false)}>&times;</span>
+                      <Slider {...settings}>
+                        <div className="cards-images"><img src={card1} alt="Modal Content 1" /></div>
+                        <div className="cards-images"><img src={card2} alt="Modal Content 2" /></div>
+                        <div className="cards-images"><img src={card3} alt="Modal Content 3" /></div>
+                      </Slider>
+                      <p>Here is the picture inside the modal!</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Second Card */}
+            <div className="card-container-wrapper">
+              <div className="card-container">
+                <div className="card" onClick={() => setSecondModalOpen(true)} style={{ cursor: 'pointer' }}>
+                  <img src={placeholder} className="card-img-top" alt="cards" />
+                  <div className="card-body">
+                    <p className="card-text">
+                      Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+                {secondModalOpen && (
+                  <div className="modal">
+                    <div className="modal-overlay" onClick={() => setSecondModalOpen(false)}></div>
+                    <div className="modal-content">
+                      <span className="close" onClick={() => setSecondModalOpen(false)}>&times;</span>
+                      <Slider {...settings}>
+                        <div className="cards-images"><img src={ad1} alt="Modal Content 1" /></div>
+                        <div className="cards-images"><img src={ad2} alt="Modal Content 2" /></div>
+                        <div className="cards-images"><img src={ad3} alt="Modal Content 3" /></div>
+                      </Slider>
+                      <p>Here is the picture inside the modal!</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Third Card */}
+            <div className="card-container-wrapper">
+              <div className="card-container">
+                <div className="card" onClick={() => setThirdModalOpen(true)} style={{ cursor: 'pointer' }}>
+                  <img src={placeholder} className="card-img-top" alt="cards" />
+                  <div className="card-body">
+                    <p className="card-text">
+                      Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+                {thirdModalOpen && (
+                  <div className="modal">
+                    <div className="modal-overlay" onClick={() => setThirdModalOpen(false)}></div>
+                    <div className="modal-content">
+                      <span className="close" onClick={() => setThirdModalOpen(false)}>&times;</span>
+                      <Slider {...settings}>
+                        <div className="cards-images"><img src={figma1} alt="Modal Content 1" /></div>
+                        <div className="cards-images"><img src={figma2} alt="Modal Content 2" /></div>
+                        <div className="cards-images"><img src={figma3} alt="Modal Content 3" /></div>
+                      </Slider>
+                      <p>Here is the picture inside the modal!</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          <div className="card-containers-wrapper">
+            {/* First Card */}
+            <div className="card-container-wrapper">
+              <div className="card-container">
+                <div className="card" onClick={() => setFirstModalOpen(true)} style={{ cursor: 'pointer' }}>
+                  <img src={placeholder} className="card-img-top" alt="cards" />
+                  <div className="card-body">
+                    <p className="card-text">
+                      Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+                {firstModalOpen && (
+                  <div className="modal">
+                    <div className="modal-overlay" onClick={() => setFirstModalOpen(false)}></div>
+                    <div className="modal-content">
+                      <span className="close" onClick={() => setFirstModalOpen(false)}>&times;</span>
+                      <Slider {...settings}>
+                        <div className="cards-images"><img src={card1} alt="Modal Content 1" /></div>
+                        <div className="cards-images"><img src={card2} alt="Modal Content 2" /></div>
+                        <div className="cards-images"><img src={card3} alt="Modal Content 3" /></div>
+                      </Slider>
+                      <p>Here is the picture inside the modal!</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Second Card */}
+            <div className="card-container-wrapper">
+              <div className="card-container">
+                <div className="card" onClick={() => setSecondModalOpen(true)} style={{ cursor: 'pointer' }}>
+                  <img src={placeholder} className="card-img-top" alt="cards" />
+                  <div className="card-body">
+                    <p className="card-text">
+                      Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+                {secondModalOpen && (
+                  <div className="modal">
+                    <div className="modal-overlay" onClick={() => setSecondModalOpen(false)}></div>
+                    <div className="modal-content">
+                      <span className="close" onClick={() => setSecondModalOpen(false)}>&times;</span>
+                      <Slider {...settings}>
+                        <div className="cards-images"><img src={ad1} alt="Modal Content 1" /></div>
+                        <div className="cards-images"><img src={ad2} alt="Modal Content 2" /></div>
+                        <div className="cards-images"><img src={ad3} alt="Modal Content 3" /></div>
+                      </Slider>
+                      <p>Here is the picture inside the modal!</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Third Card */}
+            <div className="card-container-wrapper">
+              <div className="card-container">
+                <div className="card" onClick={() => setThirdModalOpen(true)} style={{ cursor: 'pointer' }}>
+                  <img src={placeholder} className="card-img-top" alt="cards" />
+                  <div className="card-body">
+                    <p className="card-text">
+                      Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+                {thirdModalOpen && (
+                  <div className="modal">
+                    <div className="modal-overlay" onClick={() => setThirdModalOpen(false)}></div>
+                    <div className="modal-content">
+                      <span className="close" onClick={() => setThirdModalOpen(false)}>&times;</span>
+                      <Slider {...settings}>
+                        <div className="cards-images"><img src={figma1} alt="Modal Content 1" /></div>
+                        <div className="cards-images"><img src={figma2} alt="Modal Content 2" /></div>
+                        <div className="cards-images"><img src={figma3} alt="Modal Content 3" /></div>
+                      </Slider>
+                      <p>Here is the picture inside the modal!</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     {/* contact page */}
 
     {/* footer page */}  

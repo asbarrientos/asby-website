@@ -270,4 +270,203 @@ body {
 }
 
 
-/*full*/
+/*portfolio*/
+/* General Styles */
+.card-containers-wrapper {
+  display: flex;             /* This arranges the two card containers horizontally */
+  gap: 1px;                 /* Adds spacing between the cards */
+  justify-content: center; /* Center the cards horizontally */
+  padding: 5px;
+
+}
+
+.card-container-wrapper {
+  padding: 20px;
+}
+
+.card-container {
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  height: 500px;
+  width: 400px;
+}
+
+.card img {
+  background-color: #fff;
+  height: 350px;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+.card-body {
+  padding: 15px;
+  background-color: #fff;
+  height: 200px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: relative;
+  background: #dd7ca1;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 700px;
+  width: 100%;
+  z-index: 10;
+
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Image Slider */
+.cards-images, .comics-images, .ads-images, .pubmats-images {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.cards-images img {
+  width: 80%;
+  height: auto;
+  margin-left: 75px;
+}
+
+
+.comics-images img, 
+.ads-images img, 
+.pubmats-images img {
+  width: 50%;
+  height: auto;
+  margin-left: 180px;
+}
+
+/* slider */
+/* Slider Container */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-slide {
+  min-width: 100%; /* Each slide takes full width */
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Slider Images */
+.slider-slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Slider Navigation Buttons */
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.slider-button.left {
+  left: 10px;
+}
+
+.slider-button.right {
+  right: 10px;
+}
+
+/* Optional Dots (Pagination) */
+.slider-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  background-color: #333;
+}
+
+/* Responsive Slider */
+@media (max-width: 768px) {
+  .slider-button {
+    padding: 5px;
+  }
+
+  .slider-dots {
+    gap: 3px;
+  }
+
+  .slider-dot {
+    width: 8px;
+    height: 8px;
+  }
+}
